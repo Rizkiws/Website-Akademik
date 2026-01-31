@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Maarif Mirqottussaadah - Beranda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+	<link rel="icon" href="https://i.imgur.com/xtVK5Jv.png" type="image/png">
+
+    <style>
+        :root {
+            --primary-blue: #0066bf;
+            --light-blue: #4e8abf;
+            --accent-yellow: #ffa800;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .top-bar {
+            background-color: var(--primary-blue);
+            color: white;
+            font-size: 0.9rem;
+            padding: 10px 0;
+        }
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .social-icons a {
+            margin-left: 10px;
+        }
+
+		.navbar-brand img {
+            height: 55px;
+            width: auto;
+        }
+        
+        .school-info {
+            line-height: 1.1;
+        }
+
+        .school-title {
+            font-size: 1.25rem; 
+            font-weight: 700;
+            color: #ffa800; 
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .school-subtitle {
+            font-size: 0.75rem;
+            color: #999;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar-brand img {
+            height: 60px;
+        }
+        .nav-link {
+            color: #333;
+            font-weight: 500;
+            margin: 0 10px;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-blue);
+        }
+        .btn-spmb {
+            background-color: var(--accent-yellow);
+            color: white;
+            font-weight: bold;
+            border-radius: 50px;
+            padding: 8px 25px;
+        }
+        .btn-spmb:hover {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        /* Carousel */
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+
+        /* Quick Menu / Layanan */
+        .quick-menu-section {
+            padding: 50px 0;
+            background: white;
+        }
+        .quick-menu-item {
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .quick-menu-item:hover {
+            transform: translateY(-5px);
+        }
+        .quick-menu-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+        .quick-menu-item h6 {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        /* Section Titles */
+        .section-title {
+            border-left: 5px solid var(--primary-blue);
+            padding-left: 15px;
+            margin-bottom: 30px;
+            color: #333;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .see-more {
+            font-size: 0.9rem;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        /* Cards */
+        .card {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            height: 100%;
+        }
+        .card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .badge-category {
+            background-color: var(--primary-blue);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+
+        /* Agenda Section */
+        .agenda-date {
+            background: var(--accent-yellow);
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px;
+            min-width: 80px;
+        }
+        .agenda-item {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 50px 0 20px;
+        }
+        footer h5 {
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+        footer a:hover {
+            color: var(--accent-yellow);
+        }
+        .footer-bottom {
+            border-top: 1px solid #444;
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="https://scontent.fdps3-1.fna.fbcdn.net/v/t39.30808-6/456579600_1235906767567844_3416154040589907633_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeElaP_JL6ntQ7cRRy3bV2Rtw1M571LowbbDUznvUujBtpHsUyUAl03cuzmNz6c3JSt4ZV3BwSvKdF-f5MT3Atuo&_nc_ohc=fq1EIzeoymoQ7kNvwG1jdy7&_nc_oc=AdkRjj7LPUxddmGSM8Jb_VVdVtxQKoLdwZ1EgLLJRR4FeHbZuFh_8MmMrJXjVz-cdwYgoQdIIDhFHbU2HdDrmMS6&_nc_zt=23&_nc_ht=scontent.fdps3-1.fna&_nc_gid=DTjdS5DvlGAKfks6pwLHUg&oh=00_AfqSJwXicmRBSn_aRqVrjeP0eRXluycuOIBjfSTUfymTBg&oe=6980F506" alt="Logo" class="me-3">
+                
+                <div class="school-info d-flex flex-column">
+                    <span class="school-title text-uppercase">AL-MAARIF MIRQOTTUSSAADAH</span>
+                    <span class="school-subtitle text-uppercase">BERILMU | BERIMAN | BERAKHLAK</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Profil</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Sejarah</a></li>
+                            <li><a class="dropdown-item" href="#">Visi Misi</a></li>
+                            <li><a class="dropdown-item" href="#">Guru & Tendik</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#berita">Artikel</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Informasi</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#Agenda Sekolah">Agenda</a></li>
+                            <li><a class="dropdown-item" href="#">Pengumuman</a></li>
+                            <li><a class="dropdown-item" href="#">Prestasi</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://i.imgur.com/5xRiZyB.png" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.imgur.com/t8HEngP.png" class="d-block w-100" alt="Slide 2">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+
+    <section class="quick-menu-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6 col-md-3 col-lg-2 quick-menu-item">
+                    <a href="#" class="text-decoration-none">
+                        <img src="https://sman4praya.sch.id/wp-content/uploads/2022/04/ppdb.png" alt="SPMB">
+                        <h6>SPMB</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 quick-menu-item">
+                    <a href="#" class="text-decoration-none">
+                        <img src="https://sman4praya.sch.id/wp-content/uploads/2022/04/annouce.png" alt="Visi Misi">
+                        <h6>Visi Misi</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 quick-menu-item">
+                    <a href="#" class="text-decoration-none">
+                        <img src="https://sman4praya.sch.id/wp-content/uploads/2022/04/lib.png" alt="Download">
+                        <h6>Download</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 quick-menu-item">
+                    <a href="#" class="text-decoration-none">
+                        <img src="https://sman4praya.sch.id/wp-content/uploads/2022/04/agend.png" alt="Agenda">
+                        <h6>Agenda</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 quick-menu-item">
+                    <a href="#" class="text-decoration-none">
+                        <img src="https://sman4praya.sch.id/wp-content/uploads/2022/04/prest.png" alt="Prestasi">
+                        <h6>Prestasi</h6>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 quick-menu-item">
+                    <a href="#" class="text-decoration-none">
+                        <img src="https://sman4praya.sch.id/wp-content/uploads/2022/04/eskul.png" alt="Ekskul">
+                        <h6>Ekskul</h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Berita" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Berita Terbaru</h2>
+                <a href="#" class="see-more">Lihat Semua <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="position-relative">
+                            <span class="badge-category">Berita</span>
+                            <img src="https://i.imgur.com/Cp3oRiE.png" class="card-img-top" alt="Berita 1">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="#" class="text-decoration-none text-dark">Acara Pelepasan - Siswa/Siwsi...</a></h5>
+                            <p class="card-text text-muted small"><i class="far fa-calendar me-1"></i> 01 Juni 2024</p>
+                            <p class="card-text">Acara pelepasan siswa/siswi dilaksanakan dengan khidmat di lapangan sekolah...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="position-relative">
+                            <span class="badge-category">Ekstrakurikuler</span>
+                            <img src="https://i.imgur.com/usJ5KRI.png" class="card-img-top" alt="Berita 2">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="#" class="text-decoration-none text-dark">Pelaksanaan Upacara Bendera</a></h5>
+                            <p class="card-text text-muted small"><i class="far fa-calendar me-1"></i> 17 Agustus 2025</p>
+                            <p class="card-text">Kegiatan APEL Bendera pada 17 Agustus yang dihadiri oleh kepala...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="position-relative">
+                            <span class="badge-category">Akademik</span>
+                            <img src="https://i.imgur.com/KaFXjDR.jpeg" class="card-img-top" alt="Berita 3">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="#" class="text-decoration-none text-dark">Parade Marching Band</a></h5>
+                            <p class="card-text text-muted small"><i class="far fa-calendar me-1"></i> 15 April 2023</p>
+                            <p class="card-text">Sukses dalam meriahkan acara Gilang Gemilang parade marching band...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agenda" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="section-title">
+                        <h2>Agenda Sekolah</h2>
+                        <a href="#" class="see-more">Lihat Semua <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <img src="https://scontent.fdps3-1.fna.fbcdn.net/v/t39.30808-6/500051019_1736740357721892_2815993510066894202_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF_1G6SFEYIN8gNWksyAgLCrzvzE2hFZmCvO_MTaEVmYKNWcAAyexdocDdowFJKlSrYCWbI8as8v3hDbMxlNrAn&_nc_ohc=HjoTMii4Q_4Q7kNvwF3hbxl&_nc_oc=AdncxTaZ-QqvxOSc7UfmfCMVrd1umsW7InDfZcRPB-slb_R17rjmCz-uX0TKqUJjU6bb_LjZlap-Tm7qbih4N_y9&_nc_zt=23&_nc_ht=scontent.fdps3-1.fna&_nc_gid=XtfdPtGB3CK2dXsPzKg0ng&oh=00_AfqmZSNE6rhPmb5_nx48CQaF5kCzNMWQw7W1uU_qD2BAKQ&oe=6980F5EE" class="img-fluid rounded shadow" alt="Agenda Utama">
+                </div>
+                <div class="col-md-6">
+                    <div class="section-title">
+                        <h2>Agenda Mendatang</h2>
+                    </div>
+                    
+                    <div class="agenda-item">
+                        <div class="agenda-date">
+                            <div class="fw-bold fs-4">12</div>
+                            <div class="small">JUN</div>
+                        </div>
+                        <div class="agenda-content">
+                            <h5 class="mb-1 fw-bold">Pelaksanaan SPMB 2025</h5>
+                            <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i> Online</small>
+                            <small class="text-muted ms-3"><i class="far fa-clock me-1"></i> 07:00 - Selesai</small>
+                        </div>
+                    </div>
+
+                    <div class="agenda-item">
+                        <div class="agenda-date">
+                            <div class="fw-bold fs-4">10</div>
+                            <div class="small">APR</div>
+                        </div>
+                        <div class="agenda-content">
+                            <h5 class="mb-1 fw-bold">Ujian Sekolah TA. 2024/2025</h5>
+                            <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i> Ruang Kelas</small>
+                            <small class="text-muted ms-3"><i class="far fa-clock me-1"></i> 07:00 - Selesai</small>
+                        </div>
+                    </div>
+
+                    <div class="agenda-item">
+                        <div class="agenda-date">
+                            <div class="fw-bold fs-4">02</div>
+                            <div class="small">JAN</div>
+                        </div>
+                        <div class="agenda-content">
+                            <h5 class="mb-1 fw-bold">Rapat Evaluasi KBM Ganjil</h5>
+                            <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i> Ruang Guru</small>
+                            <small class="text-muted ms-3"><i class="far fa-clock me-1"></i> 08:00 - Selesai</small>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ekstrakulikuler" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeri Kegiatan & Ekskul</h2>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <img src="https://i.imgur.com/jl3we9G.png" class="img-fluid rounded mb-2" alt="Voly">
+                    <h6 class="text-center mt-2 fw-bold">Pramuka</h6>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://i.imgur.com/zZYmRNN.png" class="img-fluid rounded mb-2" alt="Teater">
+                    <h6 class="text-center mt-2 fw-bold">Tilawah</h6>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://i.imgur.com/IDjzcLp.png" class="img-fluid rounded mb-2" alt="Tarung Derajat">
+                    <h6 class="text-center mt-2 fw-bold">Paskibra</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+					<div class="school-info d-flex flex-column">
+                    <span class="school-title text-uppercase">AL-MAARIF MIRQOTTUSSAADAH</span>
+                    <span class="school-subtitle text-uppercase">BERILMU | BERIMAN | BERAKHLAK</span>
+                </div>
+                    <p>AL-Maarif Mirqottussaadah merupakan salah satu sekolah swasta di Kabupaten Lombok Tengah. Dengan visi untuk melahirkan generasi muda yang berakhlak mulia dan berilmu tinggi.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Link Terkait</h5>
+                    <a href="#agenda">Agenda</a>
+                    <a href="#">Artikel</a>
+                    <a href="#ekstrakulikuler">Ekstrakurikuler</a>
+                    <a href="#">Pengumuman</a>
+                    <a href="#">Prestasi</a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Ikuti Kami</h5>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="https://web.facebook.com/ma.mirqootusaadah" class="text-white fs-4"><i class="fab fa-facebook"></i></a>
+                        <a href="" class="text-white fs-4"><i class="fab fa-instagram"></i></a>
+                        <a href="" class="text-white fs-4"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p><i class="fab fa-whatsapp me-2"></i> 081234567890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2026 - AL-Maarif Mirqottussaadah. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
